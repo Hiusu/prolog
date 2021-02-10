@@ -1,9 +1,10 @@
 :- dynamic pos/2.
 
+pos(objeto, local).
 pos(robô, cozinha).
 pos(tv, quarto).
 
-ande(Destino):-
+ande(Destino):- 
 	retract(pos(robô, Origem)),
 	asserta(pos(robô, Destino)),
 	format('anda de ~w até ~w',[Origem,Destino]),
@@ -17,6 +18,7 @@ pegue(X):-
 	asserta(pos(X, Y)),
 	ande(Y),
 	format('pega ~w',[X]),nl,!.
+
 pegue(X):- 
 	pos(X, Destino),
 	ande(Destino),

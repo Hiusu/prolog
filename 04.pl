@@ -1,12 +1,12 @@
-start:-read(X), guess(X).
+denovo:- read(X), tente(X).
 
-guess(X):-
-	(X < 30), write('Muito baixo!'), nl, start.
-guess(X):-
-	(X >= 30), (X < 45), write('Baixo!'), nl, start.
-guess(X):-
-	(X > 45), (X =< 60), write('Alto!'), nl, start.
-guess(X):-
-	(X > 60), write('Muito alto!'), nl, start.
-guess(X):-
+tente(X):-
+	(X < 30), write('Muito baixo!'), nl, denovo.
+tente(X):-
+	(X >= 30), (X < 45), write('Baixo!'), nl, denovo.
+tente(X):-
+	(X > 45), (X =< 60), write('Alto!'), nl, denovo.
+tente(X):-
+	(X > 60), write('Muito alto!'), nl, denovo.
+tente(X):-
 	(X =:= 45), write('Acertou!'), !.

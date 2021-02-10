@@ -44,49 +44,63 @@ prole(filho, pai).
 prole(filho, mae).
 prole(filha, pai).
 prole(filha, mae).
-prole(Y, X):- genitor(X, Y).
+prole(Y, X):- 
+	genitor(X, Y).
 
 mae(mae, filho).
 mae(mae, filha).
-mae(X, Y):- genitor(X, Y), mulher(X).
+mae(X, Y):- 
+	genitor(X, Y), mulher(X).
 
 pai(pai, filho).
 pai(pai, filha).
-pai(X, Y):- genitor(X, Y), homem(X).
+pai(X, Y):- 
+	genitor(X, Y), homem(X).
 
 avos(avo, neto).
 avos(avo, neta).
-avos(X, Y):-genitor(X, Z), genitor(Z, Y).
+avos(X, Y):-
+	genitor(X, Z), genitor(Z, Y).
 
 irma(irma, irma).
 irma(irma, irmao).
-irma(X, Y):- genitor(Z, X), genitor(Z, Y), mulher(X), not(X = Y).
+irma(X, Y):- 
+	genitor(Z, X), genitor(Z, Y), mulher(X), not(X = Y).
 
 irmao(irmao, irma).
 irmao(irmao, irmao).
-irmao(X, Y):- genitor(Z, X), genitor(Z, Y), homem(X), not(X = Y).
+irmao(X, Y):- 
+	genitor(Z, X), genitor(Z, Y), homem(X), not(X = Y).
 
 descendente(descendente, ascendente).
-descendente(X, Z):- genitor(X, Z).
-descendente(X, Z):- genitor(X, Y), descendente(Y, Z).
+descendente(X, Z):- 
+	genitor(X, Z).
+descendente(X, Z):- 
+	genitor(X, Y), descendente(Y, Z).
 
 ascendente(ascendente, descendente).
-ascendente(X, Y):- genitor(Y, X).
-ascendente(X, Y):- genitor(Y, Z), genitor(Z, X).
+ascendente(X, Y):- 
+	genitor(Y, X).
+ascendente(X, Y):- 
+	genitor(Y, Z), genitor(Z, X).
 
 tio(tio, sobrinho).
 tio(tio, sobrinha).
-tio(X, Y):- irmao(X, Z), genitor(Z, Y), not(X = Z).
+tio(X, Y):- 
+	irmao(X, Z), genitor(Z, Y), not(X = Z).
 
 tia(tia, sobrinho).
 tia(tia, sobrinha).
-tia(X, Y):- irma(X, Z), genitor(Z, Y), not(X = Z).
+tia(X, Y):- 
+	irma(X, Z), genitor(Z, Y), not(X = Z).
 
 avospaternos(avo, avo, neto).
 avospaternos(avo, avo, neta).
-avospaternos(X, Y, Z):-genitor(X, W), genitor(Y, W), genitor(W, Z), homem(W), homem(X), mulher(Y).
+avospaternos(X, Y, Z):-
+	genitor(X, W), genitor(Y, W), genitor(W, Z), homem(W), homem(X), mulher(Y).
 
 avosmaternos(avo, avo, neto).
 avosmaternos(avo, avo, neta).
-avosmaternos(X, Y, Z):-genitor(X, W), genitor(Y, W), genitor(W, Z), mulher(W), homem(X), mulher(Y).
+avosmaternos(X, Y, Z):-
+	genitor(X, W), genitor(Y, W), genitor(W, Z), mulher(W), homem(X), mulher(Y).
 
