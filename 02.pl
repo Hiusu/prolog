@@ -1,54 +1,57 @@
-doa(abp,abp).
-doa(abn,abp).
-doa(abn,abn).
-doa(ap,abp).
-doa(ap,ap).
-doa(an,abp).
-doa(an,abn).
-doa(an,ap).
-doa(an,an).
-doa(bp,abp).
-doa(bp,bp).
-doa(bn,abp).
-doa(bn,abn).
-doa(bn,bp).
-doa(bn,bn).
-doa(op,abp).
-doa(op,ap).
-doa(op,bp).
-doa(op,op).
-doa(on,abp).
-doa(on,abn).
-doa(on,ap).
-doa(on,an).
-doa(on,bp).
-doa(on,bn).
-doa(on,op).
-doa(on,on).
-recebe(abp,abp).
-recebe(abp,abn).
-recebe(abp,ap).
-recebe(abp,an).
-recebe(abp,bp).
-recebe(abp,bn).
-recebe(abp,op).
-recebe(abp,on).
-recebe(abn,abn).
-recebe(abn,an).
-recebe(abn,bn).
-recebe(abn,on).
-recebe(ap,ap).
-recebe(ap,an).
-recebe(ap,op).
-recebe(ap,on).
-recebe(an,an).
-recebe(an,on).
-recebe(bp,bp).
-recebe(bp,bn).
-recebe(bp,op).
-recebe(bp,on).
-recebe(bn,bn).
-recebe(bn,on).
-recebe(op,op).
-recebe(op,on).
-recebe(on,on).
+doa(doador, recebedor).
+doa(abp, abp).
+doa(abn, abp).
+doa(abn, abn).
+doa(ap, abp).
+doa(ap, ap).
+doa(an, abp).
+doa(an, abn).
+doa(an, ap).
+doa(an, an).
+doa(bp, abp).
+doa(bp, bp).
+doa(bn, abp).
+doa(bn, abn).
+doa(bn, bp).
+doa(bn, bn).
+doa(op, abp).
+doa(op, ap).
+doa(op, bp).
+doa(op, op).
+doa(on, abp).
+doa(on, abn).
+doa(on, ap).
+doa(on, an).
+doa(on, bp).
+doa(on, bn).
+doa(on, op).
+doa(on, on).
+
+recebe(recebe, doador).
+recebe(abp, abp).
+recebe(abp, abn).
+recebe(abp, ap).
+recebe(abp, an).
+recebe(abp, bp).
+recebe(abp, bn).
+recebe(abp, op).
+recebe(abp, on).
+recebe(abn, abn).
+recebe(abn, an).
+recebe(abn, bn).
+recebe(abn, on).
+recebe(ap, ap).
+recebe(ap, an).
+recebe(ap, op).
+recebe(ap, on).
+recebe(an, an).
+recebe(an, on).
+recebe(bp, bp).
+recebe(bp, bn).
+recebe(bp, op).
+recebe(bp, on).
+recebe(bn, bn).
+recebe(bn, on).
+recebe(op, op).
+recebe(op, on).
+recebe(on, on).
